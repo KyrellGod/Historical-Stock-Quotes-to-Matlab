@@ -22,4 +22,6 @@ If you want to download another index (e.g. Dow Jones, DAX) you will have to add
 
 ### 2. Put the .csv files into the corresponding folder in data/ and import into Matlab.
 
-After downloading the data from Alpha Vantage open Matlab and take a look at the example.m. It is self-explanatory. If you can't or don't want to run data_download.sh I've put exemplary .csv files into data/. I downloaded it on August 7, 2018.
+After downloading the data from Alpha Vantage open Matlab and take a look at the file example.m. It is self-explanatory.
+
+If you can't or don't want to run data_download.sh first I've put exemplary .csv files into data/. I downloaded it on August 7, 2018.
