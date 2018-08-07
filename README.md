@@ -22,6 +22,24 @@ If you want to download another index (e.g. Dow Jones, DAX) you will have to add
 
 ### 2. Put the .csv files into the corresponding folder in data/ and import into Matlab.
 
-After downloading the data from Alpha Vantage open Matlab and take a look at the file example.m. It is self-explanatory.
+After downloading the data from Alpha Vantage open Matlab and take a look at the file example.m. It is self-explanatory. To import all data for the nasdaq100 run this code
 
-If you can't or don't want to run data_download.sh first I've put exemplary .csv files into data/. I downloaded it on August 7, 2018.
+```matlab
+clear all;
+close all;
+
+% some init settings
+addpath('data');
+
+% load all data
+data_profile.date_start                 = datenum('1000-03-01', 'yyyy-mm-dd');
+data_profile.date_end                   = datenum('3000-01-01', 'yyyy-mm-dd');
+data_profile.stock_index                = 'nasdaq100';
+data_profile.load_source                = 'load_csv';
+data_profile.load_specific_day          = 'every day';
+data_profile.load_specific_day_factor   = 1;
+data_profile.debug_mode                 = false;
+[stocks_arrays_all_days] = provide_data(data_profile);
+```
+
+If you can't or don't want to run data_download.sh first, I've put exemplary .csv files into data/. I downloaded them on August 7, 2018.
