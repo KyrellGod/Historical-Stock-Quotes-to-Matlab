@@ -1,7 +1,17 @@
-% Stock data extraction
-% Author: Kyrell God
-% Date: 2018-08-07
-% copyright (c) 2018 Kyrell God
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+%
 
 % date_start is a number
 function [stocks_arrays] = D_time_arrays(stocks_arrays, date_start, date_end, load_specific_day, load_specific_day_factor)
@@ -24,7 +34,7 @@ function [stocks_arrays] = D_time_arrays(stocks_arrays, date_start, date_end, lo
     % find the date closest to date_end
     [~, min_idx] = min(abs(stocks_arrays.T_vec - date_end));
     
-    % delete all dates before min_idx
+    % delete all dates after min_idx
     stocks_arrays.T_vec = stocks_arrays.T_vec(1:min_idx);
     stocks_arrays.T_idx = stocks_arrays.T_idx(1:min_idx);
     stocks_arrays.O_array = stocks_arrays.O_array(:, 1:min_idx);
