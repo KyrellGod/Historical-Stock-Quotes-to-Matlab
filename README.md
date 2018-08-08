@@ -8,7 +8,7 @@ There are two steps you have to follow.
 
 ### 1. Download data from Alpha Vantage into .csv files
 
-Open a terminal and run the script *data_download.sh*. It will take several minutes to download als .csv files.
+Open a terminal and run the script *data_download.sh*. It will take several minutes to download all .csv files.
 ```bash
 ./data_download.sh -i nasdaq100
 ```
@@ -24,7 +24,7 @@ If you can't or don't want to run *data_download.sh* first, I've put exemplary .
 
 ### 2. Open Matlab and import the stock quotes
 
-Put the .csv files into the corresponding folder data/nasdaq100 or data/tecdax and import into Matlab by using the function *data/provide_data.m*. An example is give in the file example.m. It is self-explanatory.
+Put the .csv files into the corresponding folder data/nasdaq100 or data/tecdax and import into Matlab by using the function *data/provide_data.m*. An example is given in the file *example.m*. It is self-explanatory.
 
 To import all data for the nasdaq100 run this code.
 ```matlab
@@ -44,7 +44,7 @@ data_profile.load_specific_day_factor   = 1;
 data_profile.debug_mode                 = false;
 [stocks_arrays_all_days] = provide_data(data_profile);
 ```
-After importing data the structure *stocks_arrays_all_days* is returned.
+After importing all data the structure *stocks_arrays_all_days* is returned.
 ```matlab
 >> stocks_arrays_all_days
 
