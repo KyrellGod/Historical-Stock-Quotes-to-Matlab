@@ -8,7 +8,7 @@ There are two steps you have to follow.
 
 ### 1. Download data from Alpha Vantage into .csv files
 
-Open a terminal and run the scipt data_download.sh. It will take several minutes to download als .csv files.
+Open a terminal and run the script data_download.sh. It will take several minutes to download als .csv files.
 ```bash
 ./data_download.sh -i nasdaq100
 ```
@@ -20,7 +20,7 @@ In both cases the script will create a new folder and put all .csv files into it
 
 If you want to download another index (e.g. Dow Jones, DAX) you will have to add the stock symbols to the script yourself. Also, if the components of the nasdaq100 are changed (e.g. Apple is dropped because of too low market capitalization) you will have to add these changes to the script yourself. The symbols in the script are hard coded.
 
-If you can't or don't want to run data_download.sh first, I've put exemplary .csv files into both folder data/nasdaq100 and data/tecdax. I downloaded the stocks quotes on August 7, 2018.
+If you can't or don't want to run data_download.sh first, I've put exemplary .csv files into both folders data/nasdaq100 and data/tecdax. I downloaded the stocks quotes on August 7, 2018.
 
 ### 2. Open Matlab and import the stock quotes
 
