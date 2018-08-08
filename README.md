@@ -64,8 +64,8 @@ stocks_arrays_all_days =
         D_array: [103×5941 double]
         S_array: [103×5941 double]
 ```
-- *symbols_vec*: List of all stock symbols (e.g. Apple = AAPL)
-- *T_vec*: Represents each point in time as the number of days from January 0, 0000.
+- *symbols_vec*: List of all stock symbols (e.g. Apple = AAPL). A total of 103 symbols.
+- *T_vec*: Represents each point in time as the number of days from January 0, 0000. A total of 5941 days.
 - *T_idx*: Represents the index in T_vec for all days available. This is interesting only if you do not import each day (e.g. only Mondays).
 - *O_array*: Opening value for each stock (103) on each market day available (5941).
 - *O_array*: High
