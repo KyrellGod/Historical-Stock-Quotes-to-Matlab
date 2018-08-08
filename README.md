@@ -75,3 +75,5 @@ stocks_arrays_all_days =
 - **V_array**: Volume
 - **D_array**: Dividends
 - **S_array**: Splits
+
+If a stock was issued later than 5941 market days ago, the values are filled with NaN.
