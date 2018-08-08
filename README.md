@@ -44,3 +44,35 @@ data_profile.load_specific_day_factor   = 1;
 data_profile.debug_mode                 = false;
 [stocks_arrays_all_days] = provide_data(data_profile);
 ```
+After importing data the structure stocks_arrays_all_days is returned.
+```matlab
+>> stocks_arrays_all_days
+
+stocks_arrays_all_days = 
+
+  struct with fields:
+
+    symbols_vec: {103×1 cell}
+          T_vec: [1×5941 double]
+          T_idx: [1×5941 double]
+        O_array: [103×5941 double]
+        H_array: [103×5941 double]
+        L_array: [103×5941 double]
+        C_array: [103×5941 double]
+       AC_array: [103×5941 double]
+        V_array: [103×5941 double]
+        D_array: [103×5941 double]
+        S_array: [103×5941 double]
+```
+-T_vec: Represents each point in time as the number of days from January 0, 0000.
+-T_idx: Represents the index in T_vec for all days available. This is interesting only if you do not import each day (e.g. only Mondays).
+-O_array: Opening value for each stock (103) on each market day available (5941).
+-O_array: High
+-L_array: Low
+-C_array: Close
+-AC_array: Adjusted Close
+-V_array: Volume
+-D_array: Dividends
+-S_array: Splits
+
+There are actually more than 100 stocks in the nasdaq100 because some companies (e.g. Google) offer two different stocks (with and without voting rights).
