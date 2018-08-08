@@ -64,7 +64,7 @@ stocks_arrays_all_days =
         D_array: [103×5941 double]
         S_array: [103×5941 double]
 ```
-- *symbols_vec*: List of all stock symbols (e.g. Apple = AAPL). A total of 103 symbols.
+- *symbols_vec*: List of all stock symbols (e.g. Apple = AAPL). A total of 103 symbols. There are actually more than 100 stocks in the nasdaq100 because some companies (e.g. Google) offer two different stocks (with and without voting rights).
 - *T_vec*: Represents each point in time as the number of days from January 0, 0000. A total of 5941 days.
 - *T_idx*: Represents the index in T_vec for all days available. This is interesting only if you do not import each day (e.g. only Mondays).
 - *O_array*: Opening value for each stock (103) on each market day available (5941).
@@ -75,5 +75,3 @@ stocks_arrays_all_days =
 - *V_array*: Volume
 - *D_array*: Dividends
 - *S_array*: Splits
-
-There are actually more than 100 stocks in the nasdaq100 because some companies (e.g. Google) offer two different stocks (with and without voting rights).
