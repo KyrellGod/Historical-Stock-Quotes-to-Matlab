@@ -8,7 +8,11 @@ There are two steps you have to follow.
 
 ### 1. Download data from Alpha Vantage into .csv files
 
-Open a terminal and run the script *data_download.sh*. It will take several minutes to download all .csv files.
+Open a terminal and make the script *data_download.sh* executable. 
+```bash
+chmod +x data_download.sh
+```
+Then run the script with the index you want to download, in this case the nasdaq100. It will take several minutes to download all .csv files.
 ```bash
 ./data_download.sh -i nasdaq100
 ```
