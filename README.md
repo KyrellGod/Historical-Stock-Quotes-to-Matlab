@@ -12,7 +12,7 @@ Open a terminal and make the script *data_download.sh* executable.
 ```bash
 chmod +x data_download.sh
 ```
-Then run the script with the index you want to download, in this case the nasdaq100. It will take several minutes to download all .csv files.
+Then run the script with the index you want to download, in this case the nasdaq100. It will take several minutes to download all .csv files because the free version of ALPHA VANTAGE limits the call frequency. Thus most stocks quotes will have to be requested more than once. The script does so automatically.
 ```bash
 ./data_download.sh -i nasdaq100
 ```
