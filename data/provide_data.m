@@ -32,11 +32,12 @@ function [stocks_arrays] = provide_data(data_profile)
     stocks          = A_extract_stocks_from_csv(stock_index, load_source);
     stocks          = B_check_stocks_time_base(stocks);
     stocks_arrays   = C_create_arrays(stocks);
-    stocks_arrays   = D_time_arrays(stocks_arrays, date_start, date_end, load_specific_day, load_specific_day_factor);
+    stocks_arrays   = D_check_zeros(stocks_arrays);
+    stocks_arrays   = E_time_arrays(stocks_arrays, date_start, date_end, load_specific_day, load_specific_day_factor);
     
     % test random data points
     if debug_mode == true
-        E_test_data(stocks_arrays);
+        F_test_data(stocks_arrays);
     end
     
     disp(' ');
