@@ -23,165 +23,32 @@ download_idx_data=true;
 minimumsize=1000;
 wait_time=3;
 
-# compare passed argument with any known index and make sure it is valid, then create the list of symbols
+# compare passed argument with any known index and make sure it is valid
 if [ "${idx_passed}" = "nasdaq100" ]; then
+
+	# source: https://www.nasdaq.com/quotes/nasdaq-100-stocks.aspx
 
 	idx='nasdaq100';
 	idx_symbol='^NDX';
+	ticker_symbol_file='ticker_symbol/nasdaq100.csv';
 	
-	# source: https://www.nasdaq.com/quotes/nasdaq-100-stocks.aspx
 
-	symbols[0]='AAL';
-	symbols[1]='AAPL';
-	symbols[2]='ADBE';
-	symbols[3]='ADI';
-	symbols[4]='ADP';
-	symbols[5]='ADSK';
-	symbols[6]='ALGN';
-	symbols[7]='ALXN';
-	symbols[8]='AMAT';
-	symbols[9]='AMGN';
-	symbols[10]='AMZN';
-	symbols[11]='ASML';
-	symbols[12]='ATVI';
-	symbols[13]='AVGO';
-	symbols[14]='BIDU';
-	symbols[15]='BIIB';
-	symbols[16]='BKNG';
-	symbols[17]='BMRN';
-	symbols[18]='CA';
-	symbols[19]='CDNS';
-	symbols[20]='CELG';
-	symbols[21]='CERN';
-	symbols[22]='CHKP';
-	symbols[23]='CHTR';
-	symbols[24]='CMCSA';
-	symbols[25]='COST';
-	symbols[26]='CSCO';
-	symbols[27]='CSX';
-	symbols[28]='CTAS';
-	symbols[29]='CTRP';
-	symbols[30]='CTSH';
-	symbols[31]='CTXS';
-	symbols[32]='DLTR';
-	symbols[33]='EA';
-	symbols[34]='EBAY';
-	symbols[35]='ESRX';
-	symbols[36]='EXPE';
-	symbols[37]='FAST';
-	symbols[38]='FB';
-	symbols[39]='FISV';
-	symbols[40]='FOX'; #Twenty-First Century Fox, Inc.
-	symbols[41]='FOXA'; #Twenty-First Century Fox, Inc.
-	symbols[42]='GILD';
-	symbols[43]='GOOG'; #Alphabet Inc.
-	symbols[44]='GOOGL'; #Alphabet Inc.
-	symbols[45]='HAS';
-	symbols[46]='HOLX';
-	symbols[47]='HSIC';
-	symbols[48]='IDXX';
-	symbols[49]='ILMN';
-	symbols[50]='INCY';
-	symbols[51]='INTC';
-	symbols[52]='INTU';
-	symbols[53]='ISRG';
-	symbols[54]='JBHT';
-	symbols[55]='JD';
-	symbols[56]='KHC';
-	symbols[57]='KLAC';
-	symbols[58]='LBTYA'; #Liberty Global plc
-	symbols[59]='LBTYK'; #Liberty Global plc
-	symbols[60]='LRCX';
-	symbols[61]='MAR';
-	symbols[62]='MCHP';
-	symbols[63]='MDLZ';
-	symbols[64]='MELI';
-	symbols[65]='MNST';
-	symbols[66]='MSFT';
-	symbols[67]='MU';
-	symbols[68]='MXIM';
-	symbols[69]='MYL';
-	symbols[70]='NFLX';
-	symbols[71]='NTES';
-	symbols[72]='NVDA';
-	symbols[73]='ORLY';
-	symbols[74]='PAYX';
-	symbols[75]='PCAR';
-	symbols[76]='PEP';	
-	symbols[77]='PYPL';
-	symbols[78]='QCOM';
-	symbols[79]='QRTEA';
-	symbols[80]='REGN';
-	symbols[81]='ROST';
-	symbols[82]='SBUX';
-	symbols[83]='SHPG';
-	symbols[84]='SIRI';
-	symbols[85]='SNPS';
-	symbols[86]='STX';
-	symbols[87]='SWKS';
-	symbols[88]='SYMC';
-	symbols[89]='TMUS';
-	symbols[90]='TSLA';
-	symbols[91]='TTWO';
-	symbols[92]='TXN';
-	symbols[93]='ULTA';
-	symbols[94]='VOD';
-	symbols[95]='VRSK';
-	symbols[96]='VRTX';
-	symbols[97]='WBA';
-	symbols[98]='WDAY';
-	symbols[99]='WDC';
-	symbols[100]='WYNN';
-	symbols[101]='XLNX';
-	symbols[102]='XRAY';
+elif [ "${idx_passed}" = "sp500" ]; then
 
-	# download index data if we are interested in it
-	if [ $download_idx_data = true ] ; then
-		symbols[103]=$idx_symbol;
-	fi
+	# source: https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
+	# nice tool for converting html table to csv file: http://www.convertcsv.com/html-table-to-csv.htm
+
+	idx='sp500';
+	idx_symbol='^SPX';
+	ticker_symbol_file='ticker_symbol/sp500.csv';
 
 elif [ "${idx_passed}" = "tecdax" ]; then
 
+	# source: Guidants App
+
 	idx='tecdax';
 	idx_symbol='^TECDAX';
-	
-	# source: Guidants
-	
-	symbols[0]='AIXA.DE'; 	# Aixtron
-	symbols[1]='BC8.DE';	# Bechtle AG
-	symbols[2]='COK.DE';	# Cancom
-	symbols[3]='AFX.DE';	# Carl Zeiss
-	symbols[4]='COP.DE';	# CompuGroup Medical
-	symbols[5]='DLG.DE';	# Dialog
-	symbols[6]='DRW3.DE';	# Draegerwerk
-	symbols[7]='DRI.DE';	# 1&1 Drillisch
-	symbols[8]='EVT.DE'; 	# Evotec
-	symbols[9]='FNTN.DE';	# freenet AG
-	symbols[10]='ISR.DE';	# ISRA
-	symbols[11]='JEN.DE';	# Jenoptik
-	symbols[12]='MDG1.DE';	# Medigene
-	symbols[13]='MOR.DE';	# Morphosys
-	symbols[14]='NEM.DE';	# Nemetschek
-	symbols[15]='NDX1.DE';	# Nordex
-	symbols[16]='PFV.DE'; 	# Pfeiffer
-	symbols[17]='QIA.DE';	# Qiagen
-	symbols[18]='RIB.DE';	# RIB Software
-	symbols[19]='SANT.DE';	# S&T
-	symbols[20]='SRT3.DE';	# Satorius
-	symbols[21]='SHL.DE';	# Siemens Healthliner
-	symbols[22]='WAF.DE';	# Siltronic AG
-	symbols[23]='AM3D.DE';	# SLM Solutions
-	symbols[24]='S92.DE';	# SMA Solar Technology AG
-	symbols[25]='SOW.DE';	# Software AG
-	symbols[26]='O2D.DE';	# Telefonica
-	symbols[27]='UTDI.DE';	# United Internet
-	symbols[28]='WDI.DE';	# Wirecard
-	symbols[29]='O1BC.DE';	# XING
-
-	# download index data if we are interested in it
-	if [ $download_idx_data = true ] ; then
-		symbols[30]=$idx_symbol;
-	fi
+	ticker_symbol_file='ticker_symbol/tecdax.csv';
 
 else
 
@@ -190,6 +57,28 @@ else
 	echo " ";
 	exit 1;
 
+fi
+
+# create empty list of ticker symbols
+symbols=();
+
+# read in ticker symbols from file and append to array
+while IFS=$' \t\n\r' read -r line
+do
+	# skip lines that start with #
+	case "$line" in \#*) continue ;; esac
+
+	# append to symbols
+	#symbols+=("$line");
+
+	# append to symbols but replace . with -
+	symbols+=("${line//./-}");
+
+done < "$ticker_symbol_file"
+
+# download index data if we are interested in it
+if [ $download_idx_data = true ] ; then
+	symbols+=("$idx_symbol");
 fi
 
 # determine the size of the array
