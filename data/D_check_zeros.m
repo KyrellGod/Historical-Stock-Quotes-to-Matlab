@@ -13,7 +13,6 @@
 % along with this program.  If not, see <http://www.gnu.org/licenses/>.
 %
 
-% date_start is a number
 function [stocks_arrays_checked] = D_check_zeros(stocks_arrays)
 
     % We have to make sure that the stocks data does not randomly contain zeros.
