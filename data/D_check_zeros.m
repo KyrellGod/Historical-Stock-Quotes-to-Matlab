@@ -19,7 +19,7 @@ function [stocks_arrays_checked] = D_check_zeros(stocks_arrays)
     % This is a problem for non-US stocks only. If the market is closed in Germany but it is opened
     % in the US, Alpha Vantage still assumes values for Germany for this particular day - all zeros.
     
-    % I'm not sure yet if the is a simple solution to this problem, therefore it's only a warning.
+    % I'm not sure yet if there is a simple solution to this problem, therefore it's only a warning.
     
     % find all zeros in the opening values
     O_zeros_indices = find(stocks_arrays.O_array == 0.0);
