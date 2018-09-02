@@ -16,15 +16,18 @@ Then run the script with the index you want to download, in this case the nasdaq
 ```bash
 ./data_download.sh -i nasdaq100
 ```
-You can also download stock quotes for the german TecDAX.
+You can also download stock quotes for the german TecDAX or the S&P 500.
 ```bash
 ./data_download.sh -i tecdax
+./data_download.sh -i sp500
 ```
 In both cases the script will create a new folder and put all .csv files into it. Also, it will create a compressed version of this folder.
 
-If you want to download another index (e.g. Dow Jones, DAX) you will have to add the stock symbols to the script yourself. Also, if the components of the nasdaq100 are changed (e.g. Apple is dropped because of too low market capitalization) you will have to add these changes to the script yourself. The symbols in the script are hard coded.
+If you want to download another index (e.g. Dow Jones, DAX) you will have to add the stock symbols to the subfolder *ticker_symbol* yourself. Also, if the components of the nasdaq100 are changed (e.g. Apple is dropped because of too low market capitalization) you will have to add these changes yourself.
 
-If you can't or don't want to run *data_download.sh* first, I've put exemplary .csv files into both folders data/nasdaq100 and data/tecdax. I downloaded the stocks quotes on August 10, 2018.
+A good source for a current list of all components of the S&P 500 is Wikipedia. You can extract the data from an html table by converting it to a .csv file which you then can put into the folder *ticker_symbol*.
+
+If you can't or don't want to run *data_download.sh* first, I've put exemplary .csv files into both folders data/nasdaq100 and data/tecdax. I downloaded the stocks quotes on September 2, 2018.
 
 ### 2. Open Matlab and import the stock quotes
 
