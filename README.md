@@ -30,7 +30,7 @@ If you can't or don't want to run *data_download.sh* first, I've put exemplary .
 
 ### 2. Open Matlab and import the stock quotes
 
-Put the .csv files into the corresponding folder data/nasdaq100 or data/tecdax and import into Matlab by using the function *data/provide_data.m*. An example is given in the file *example.m*. It is self-explanatory.
+Put the .csv files into the corresponding folder data/nasdaq100 or data/sp500 and import into Matlab by using the function *data/provide_data.m*. An example is given in the file *example.m*. It is self-explanatory.
 
 To import all data for the nasdaq100 run this code.
 ```matlab
