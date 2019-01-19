@@ -26,7 +26,7 @@ If you want to download another index (e.g. Dow Jones, DAX) you will have to add
 
 A good source for a current list of all components of the S&P 500 is Wikipedia. You can extract the data from an html table by converting it to a .csv file which you then can put into the folder *ticker_symbol*.
 
-If you can't or don't want to run *data_download.sh* first, I've put exemplary .csv files into both folders data/nasdaq100 and data/tecdax. I downloaded the stocks quotes on September 2, 2018.
+If you can't or don't want to run *data_download.sh* first, I've put exemplary .csv files into both folders data/nasdaq100 and data/sp500. I downloaded the stocks quotes on January 20, 2019.
 
 ### 2. Open Matlab and import the stock quotes
 
