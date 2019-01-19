@@ -20,8 +20,8 @@ function [stocks_raw] = A_extract_stocks_from_csv(stock_index, source)
         % determine directory depending on stock index
         if strcmp(stock_index, 'nasdaq100')
             directory = 'data/nasdaq100/';
-        elseif strcmp(stock_index, 'tecdax')
-            directory = 'data/tecdax/';
+        elseif strcmp(stock_index, 'sp500')
+            directory = 'data/sp500/';
         else
             error('Unknown stock index!');        
         end
