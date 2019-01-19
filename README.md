@@ -16,9 +16,8 @@ Then run the script with the index you want to download, in this case the nasdaq
 ```bash
 ./data_download.sh -i nasdaq100
 ```
-You can also download stock quotes for the german TecDAX or the S&P 500.
+You can also download stock quotes for the S&P 500.
 ```bash
-./data_download.sh -i tecdax
 ./data_download.sh -i sp500
 ```
 In both cases the script will create a new folder and put all .csv files into it. Also, it will create a compressed version of this folder.

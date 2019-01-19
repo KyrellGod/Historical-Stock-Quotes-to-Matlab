@@ -29,7 +29,7 @@ if [ "${idx_passed}" = "nasdaq100" ]; then
 	# source: https://www.nasdaq.com/quotes/nasdaq-100-stocks.aspx
 
 	idx='nasdaq100';
-	idx_symbol='^NDX';
+	idx_symbol='NDX';
 	ticker_symbol_file='ticker_symbol/nasdaq100.csv';
 	
 
@@ -41,14 +41,6 @@ elif [ "${idx_passed}" = "sp500" ]; then
 	idx='sp500';
 	idx_symbol='^SPX';
 	ticker_symbol_file='ticker_symbol/sp500.csv';
-
-elif [ "${idx_passed}" = "tecdax" ]; then
-
-	# source: Guidants App
-
-	idx='tecdax';
-	idx_symbol='^TECDAX';
-	ticker_symbol_file='ticker_symbol/tecdax.csv';
 
 else
 
