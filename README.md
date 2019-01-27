@@ -12,7 +12,7 @@ Open a terminal and make the script *data_download.sh* executable.
 ```bash
 chmod +x data_download.sh
 ```
-Then run the script with a path to a file that contains symbols (-s *filepath*) and a period (-p *day | 1min | 5min | 15min | 30min| 6 0min*). It will take several minutes to download all .csv files because the free version of ALPHA VANTAGE limits the call frequency. Thus most stocks quotes will have to be requested more than once. The script does so automatically.
+Then run the script with a path to a file that contains symbols (-s *filepath*) and a period (-p *day | 1min | 5min | 15min | 30min| 60min*). It will take several minutes to download all .csv files because the free version of ALPHA VANTAGE limits the call frequency. Thus most stocks quotes will have to be requested more than once. The script does so automatically.
 ```bash
 ./data_download.sh -s ticker_symbols/nasdaq100.csv -p day
 ```
