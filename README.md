@@ -12,17 +12,11 @@ Open a terminal and make the script *data_download.sh* executable.
 ```bash
 chmod +x data_download.sh
 ```
-Then run the script with the index you want to download, in this case the nasdaq100. It will take several minutes to download all .csv files because the free version of ALPHA VANTAGE limits the call frequency. Thus most stocks quotes will have to be requested more than once. The script does so automatically.
+Then run the script with a path to a file that contains symbols (-s *filepath*) and a period (-p *day | 1min | 5min | 15min | 30min| 60min*). It will take several minutes to download all .csv files because the free version of ALPHA VANTAGE limits the call frequency. Thus most stocks quotes will have to be requested more than once. The script does so automatically.
 ```bash
-./data_download.sh -i nasdaq100
+./data_download.sh -s ticker_symbol/nasdaq100.csv -p day
 ```
-You can also download stock quotes for the S&P 500.
-```bash
-./data_download.sh -i sp500
-```
-In both cases the script will create a new folder and put all .csv files into it. Also, it will create a compressed version of this folder.
-
-If you want to download another index (e.g. Dow Jones, DAX) you will have to add the stock symbols to the subfolder *ticker_symbol* yourself. Also, if the components of the nasdaq100 are changed (e.g. Apple is dropped because of too low market capitalization) you will have to add these changes yourself.
+The script will create a new folder and put all .csv files into it. Also, it will create a compressed version of this folder.
 
 A good source for a current list of all components of the S&P 500 is Wikipedia. You can extract the data from an html table by converting it to a .csv file which you then can put into the folder *ticker_symbol*.
 
