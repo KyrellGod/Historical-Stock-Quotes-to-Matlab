@@ -68,7 +68,7 @@ minimumsize=1000;
 wait_time=3;
 
 # limit tries per symbol
-max_tries=3;
+max_tries=30;
 
 # create empty list of ticker symbols
 symbols=();
@@ -97,7 +97,7 @@ array_size=${#symbols[@]};
 d=$(date +'%Y_%m_%d_%H_%M_%S');
 
 # create directory were data will be saved
-directory="${filename}_${extension}_${d}";
+directory="${filename}_${extension}_${period_passed}_${d}";
 mkdir $directory;
 
 # now download all symbols one by one
